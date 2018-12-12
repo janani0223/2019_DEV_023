@@ -12,3 +12,12 @@ To run the application first use command 'npm install'
 Use command 'npm start' , this command starts your aplication. The application will be running in the browser 
 
 The url will be 'localhost:3000'
+
+
+To run unit test cases we need install some more dependencies 
+
+1.enzyme
+2.enzyme-adapter-react-16
+3.react-test-renderer
+
+After installing the above dependencies use command 'npm test' to run the unit test cases 
