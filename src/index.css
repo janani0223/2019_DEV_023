@@ -36,7 +36,9 @@ body {
   text-align: center;
   width: 100px;
 }
-
+.square:hover{
+  background: rgba(185, 182, 182, 0.171);
+}
 .square:focus {
   outline: none;
 }

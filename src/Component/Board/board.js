@@ -41,10 +41,14 @@ export default class Board extends React.Component {
       if (winner) {
         status = 'Winner: ' + winner;
       } else {
-        if(this.state.noOfMoves == 9){
+        if(this.state.noOfMoves === 9){
           status = 'Match is Drawn';
         }
         else{
+          if(this.state.noOfMoves === 0){
+            status = 'First player: X';
+          }
+          else
           status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
       
