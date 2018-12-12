@@ -21,3 +21,7 @@ To run unit test cases we need install some more dependencies
 3.react-test-renderer
 
 After installing the above dependencies use command 'npm test' to run the unit test cases 
+
+To know the test coverage use command 'npm test -- --coverage'.
+
+To start over the apllication as a fresh player, Refresh the page.
