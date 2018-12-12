@@ -15,7 +15,7 @@ it('Testing for Inital state', ()=> {
   const playerX = boardComponentIntial
     .find("div.status")
     .text();
-  expect(playerX).toEqual("Next player: X");
+  expect(playerX).toEqual("First player: X");
 })
 
 it("Testing game flow", () => {
@@ -24,7 +24,7 @@ it("Testing game flow", () => {
     .find("div.status")
     .first()
     .text();
-  expect(playerX).toEqual("Next player: X");
+  expect(playerX).toEqual("First player: X");
 
   const firstClick = wrapper.find("button.square").first();
   firstClick.simulate("click");
@@ -60,31 +60,31 @@ it("Testing for match drawn scenario", () => {
   const boardComponent = mount(<Board />);
 
     //player x
-  const turn1 = boardComponent.find("button.square").first();
+  const turn1 = boardComponent.find("button.square").at(0);
   turn1.simulate("click");
   //player o
-  const turn2 = boardComponent.find("button.square").at(1);
+  const turn2 = boardComponent.find("button.square").at(8);
   turn2.simulate("click");
   //player x
   const turn3 = boardComponent.find("button.square").at(2);
   turn3.simulate("click");
   //player o
-  const turn4 = boardComponent.find("button.square").at(3);
+  const turn4 = boardComponent.find("button.square").at(6);
   turn4.simulate("click");
   //player x
   const turn5 = boardComponent.find("button.square").at(4);
   turn5.simulate("click");
   //player o
-  const turn6 = boardComponent.find("button.square").at(6);
+  const turn6 = boardComponent.find("button.square").at(3);
   turn6.simulate("click");
   //player x
   const turn7 = boardComponent.find("button.square").at(7);
   turn7.simulate("click");
   //player o
-  const turn8 = boardComponent.find("button.square").at(5);
+  const turn8 = boardComponent.find("button.square").at(1);
   turn8.simulate("click");
   //player x
-  const turn9 = boardComponent.find("button.square").at(8);
+  const turn9 = boardComponent.find("button.square").at(5);
   turn9.simulate("click");
 
   const winner = boardComponent
