@@ -7,6 +7,7 @@ export default class Board extends React.Component {
     this.state = {
       squares: Array(9).fill(null),
       xIsNext: true,
+      noOfMoves: 0,
     };
   }
 
@@ -19,6 +20,7 @@ export default class Board extends React.Component {
     this.setState({
       squares: squares,
       xIsNext: !this.state.xIsNext,
+      noOfMoves: this.state.noOfMoves + 1,
     });
   }
 
@@ -31,14 +33,21 @@ export default class Board extends React.Component {
     );
   }
 
+
     render() {
     const winner = winningPostions(this.state.squares);
     let status;
-    if (winner) {
-      status = 'Winner: ' + winner;
-    } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+    if(this.state.noOfMoves < 9){
+      if (winner) {
+        status = 'Winner: ' + winner;
+      } else {
+        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      }
     }
+    else {
+      status = 'Match is Drawn';
+    }
+
 
     return (
       <div>
