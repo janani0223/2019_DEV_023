@@ -9,26 +9,37 @@ body {
   display: table;
 }
 .status {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 28px;
+}
+.board{
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .square {
+  cursor: pointer;
   background: #fff;
-  border: 1px solid #999;
+  border: 1.5px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  height: 100px;
+  margin-right: -1.5px;
+  margin-top: -1.5px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 100px;
 }
 
 .square:focus {
   outline: none;
 }
- h2{
+ h1{
   text-align: center;
  }
