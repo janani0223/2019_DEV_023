@@ -37,20 +37,23 @@ export default class Board extends React.Component {
     render() {
     const winner = winningPostions(this.state.squares);
     let status;
-    if(this.state.noOfMoves < 9){
+    
       if (winner) {
         status = 'Winner: ' + winner;
       } else {
-        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        if(this.state.noOfMoves == 9){
+          status = 'Match is Drawn';
+        }
+        else{
+          status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        }
+      
       }
-    }
-    else {
-      status = 'Match is Drawn';
-    }
+
 
 
     return (
-      <div>
+      <div className="board">
         <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}

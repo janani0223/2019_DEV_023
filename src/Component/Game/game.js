@@ -6,7 +6,7 @@ export default class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <h2>Welcome to Tic Tac Toe Game</h2>
+          <h1>Welcome to Tic Tac Toe Game</h1>
           <Board />
         </div>
       </div>
